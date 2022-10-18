@@ -1,0 +1,40 @@
+﻿
+@model  Employee.Models.Employee
+@using Employee.Controllers
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Employee Detail</h2>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    td, th {
+        border: 2px solid #dddddd;
+        text-align:center;
+        padding: 8px;
+    }
+</style>
+<table >
+    <tr>
+        <th>EmpID</th>
+        <th>EmpName</th>
+        <th>EmpLocation</th>
+    </tr>
+
+    @foreach (Employee.Models.Employee p in ViewData["name"]as List<Employee.Models.Employee>)
+    {
+
+        <tr>
+            <td>@p.EmpId</td>
+            <td>@p.EmpName</td>
+            <td>@p.EmpLocation</td>
+        </tr>
+    }
+
+</table>
+

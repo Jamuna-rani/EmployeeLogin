@@ -1,0 +1,19 @@
+﻿@model Employee.Models.Employee
+@{
+    ViewBag.Title = "all";
+}
+
+<h2>Login Page</h2>
+
+@using (Html.BeginForm("Login", "Emp", FormMethod.Get))
+{
+
+
+    <label>UserName</label>
+    @Html.TextBoxFor(m => m.Name)
+    <br />
+    <label>Password</label>
+    @Html.PasswordFor(m => m.Password)
+    <br />
+    <button>submit</button>
+}
